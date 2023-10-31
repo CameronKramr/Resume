@@ -8,11 +8,11 @@
 \def\Rohde{1}
 \def\LMCO{1}
 
-\def\RUWPTRX{1}		%WPTRx Research project
-\def\RUSDR{0}		%SDR Project in Modern Communications systems
+\def\RUWPTRX{0}		%WPTRx Research project
+\def\RUSDR{1}		%SDR Project in Modern Communications systems
 \def\RUXILINX{0}	%Xilinx accelerator using Vivado
-\def\RSEAMP{1}		%R&S Amplifier controller
-\def\RSDATA{0}		%Data scraping project at Rohde
+\def\RSEAMP{0}		%R&S Amplifier controller
+\def\RSDATA{1}		%Data scraping project at Rohde
 \def\CSMBLDC{1}		%CMS Senior Design Project
 \def\CSMQUAD{0}		%Quad Copter Project
 \def\LSROBO{0}		%Robot arm project for engineering class
@@ -58,13 +58,14 @@
 \begin{document}
 
 %------------------------------------------------------------------------------
-\name{Cameron K. Kramr}
+\name{Cameron Kramr}
 \tagline{RF \& Embedded Electrical Engineer}
 
 \personalinfo{
 	\phone{832-370-8131}
 	\email{CameronKramr@gmail.com}
-	\mailaddress{2334 Triway Ln, Houston Tx, 77043}
+	\github{CameronKramr}
+	\mailaddress{Houston Tx, 77043}
 	\linkedin{CameronKramr}
 }
 
@@ -72,7 +73,7 @@
 
 %------------------------------------------------------------------------------
 %Change itemized things to be slightly smaller
-\AtBeginEnvironment{itemize}{\small}
+\AtBeginEnvironment{itemize}{\normalsize}
 %Configure Column Ratio to be pleasing
 \columnratio{0.6}
 
@@ -123,7 +124,7 @@
 \begin{itemize}
 \item Programmed custom task scheduler on AVR platform
 \item Implemented HTML server
-\item Implemented industry standard remote control protocol over TCP
+\item Implemented industry standard remote protocol over TCP
 \item Collaborated with co-workers using GIT
 \end{itemize}
 \fi
@@ -214,7 +215,7 @@
 \if\LMCO1
 \cvevent{RF Design Intern}{Lockheed Martin RF Center of Excellence}{Jun. 2020 -- Aug. 2020 -- Littleton, CO.} {}
 \begin{itemize}
-\item Use RF principles to design devices
+\item Applied RF principles to design devices
 \item Verify designs in simulation \& present results to team
 \end{itemize}
 \fi
