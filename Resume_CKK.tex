@@ -8,11 +8,12 @@
 \def\Rohde{1}
 \def\LMCO{1}
 
+\def\RUROBLOXDATA{0}	%Roblox data scraper RCEL 506 project
 \def\RUWPTRX{0}		%WPTRx Research project
-\def\RUSDR{1}		%SDR Project in Modern Communications systems
-\def\RUXILINX{0}	%Xilinx accelerator using Vivado
-\def\RSEAMP{0}		%R&S Amplifier controller
-\def\RSDATA{1}		%Data scraping project at Rohde
+\def\RUSDR{0}		%SDR Project in Modern Communications systems
+\def\RUXILINX{1}	%Xilinx accelerator using Vivado
+\def\RSEAMP{1}		%R&S Amplifier controller
+\def\RSDATA{0}		%Data scraping project at Rohde
 \def\CSMBLDC{1}		%CMS Senior Design Project
 \def\CSMQUAD{0}		%Quad Copter Project
 \def\LSROBO{0}		%Robot arm project for engineering class
@@ -65,8 +66,8 @@
 	\phone{832-370-8131}
 	\email{CameronKramr@gmail.com}
 	\github{CameronKramr}
-	\mailaddress{Houston Tx, 77043}
 	\linkedin{CameronKramr}
+	\mailaddress{Houston Tx, 77043}
 }
 
 \makecvheader
@@ -79,15 +80,46 @@
 
 \begin{paracol}{2}
 
+
+%------------------------------------------------------------------------------
+\cvsection{Employment History}
+
+\if\Rohde1
+\cvevent{EMC Systems Architect} {Rohde \& Schwarz}{Mar. 2021 -- Aug. 2022 -- Dallas, TX.}{}
+\begin{itemize}
+\item Secured over \$1,000,000 in projects with customer sign-off
+\item Finalized sales design concept into detailed drawings
+\item Conducted design review for project drawings with customer
+\end{itemize}
+\divider
+\fi
+
+\if\LMCO1
+\cvevent{RF Design Intern}{Lockheed Martin RF Center of Excellence}{Jun. 2020 -- Aug. 2020 -- Littleton, CO.} {}
+\begin{itemize}
+\item Wrote Python scripts to automate HFSS RF design simulation
+\item Designed K-band cross-over board ahead of schedule
+\end{itemize}
+\fi
+
 %------------------------------------------------------------------------------
 \cvsection{Prior Projects}
+
+\if\RUROBLOXDATA1
+\cvevent{Roblox Game Analyzer}{Rice University, Research Project}{Aug. 2023 - Dec. 2023}{}
+\begin{itemize}
+\item{Revealed key aspects that drive success in Roblox games}
+\item{Collected data with automatic scraper}
+\item{Tested theory with game that got to front page}
+\end{itemize}
+\fi
 
 \if\RUWPTRX1
 \cvevent{Wireless Power Receiver}{Rice University, Research Project}{Jan. 2023 - Jul. 2023}{}
 \begin{itemize}
-\item Designed \& assembled PCB for fine-pitch BGA components
+\item Designed \& assembled complicated PCB for BGA components
 \item Developed bare-metal C drivers for QI chip over I2C
-\item Developed ncurses GUI for HUD over UART 
+\item Developed ncurses GUI for HCI over UART
 \end{itemize}
 \fi
 
@@ -99,22 +131,22 @@
 
 \cvevent{Software Defined Radio (SDR) Transceiver}{Rice University, Modern Communications Course}{Aug. 2022 - Dec. 2022}{}
 \begin{itemize}
-\item Developed SDR algorithm to send \& receive data wirelessly
+\item Developed Python SDR to send \& receive data wirelessly
 \item Implemented simplified Wifi stack
-\item Implemented QAM, BPSK, DQPSK, \& other modulation techniques
+\item Implemented QAM, BPSK, DQPSK, \& other RF techniques
 \end{itemize}
 \fi
 
-
 \if\RUXILINX1
 
-\divider
+%\divider
 
-\cvevent{Systolic Matrix Decomposition Accelerator}{Rice University, Advanced Digital Design Course}{Aug. 2022 - Dec. 2022}{}
+\cvevent{Xilinx Matrix Solving Accelerator}{Rice University, Advanced Digital Design Course}{Aug. 2022 - Dec. 2022}{}
 \begin{itemize}
 \item Developed IP blocks using Xilinx Vivado workflow
 \item Solved for matrix inverse using QR Decomposition
-\item Implemented Given's rotation using custom CORDIC modules
+\item Implemented Given's rotation using custom CORDIC block
+\item Composed multiple custom IP blocks into system
 \end{itemize}
 \fi
 
@@ -122,8 +154,9 @@
 \divider
 \cvevent{Embedded Amplifier Controller}{Rohde \& Schwarz}{Nov. 2021 - May. 2022}{}
 \begin{itemize}
+\item Enabled use of amplifier core to project
 \item Programmed custom task scheduler on AVR platform
-\item Implemented HTML server
+%\item Implemented Embedded HTML server
 \item Implemented industry standard remote protocol over TCP
 \item Collaborated with co-workers using GIT
 \end{itemize}
@@ -137,7 +170,7 @@
 \begin{itemize}
 \item Built tool in python to extract data from dirty source
 \item Analyzed over 20,000 lines of dirty Excel data in python
-\item Used insights from data to improve project designs
+\item Used data to optimize inventory and improve designs
 \end{itemize}
 \fi
 
@@ -146,8 +179,8 @@
 \cvevent{BLDC Motor Controller}{Colorado School of Mines, Capstone Project}{Jan. 2020 - Dec. 2020}{}
 \begin{itemize}
 \item Designed \& tested multiple custom PCBs
-\item Wrote SV-PWM motor controller in embedded C
-\item Implemented EMF position detection using ADCs \& DMA 
+\item Wrote SV-PWM motor controller for PIC in embedded C
+\item Implemented EMF position detection using ADCs \& DMA
 \end{itemize}
 \fi
 
@@ -161,7 +194,6 @@
 \end{itemize}
 \fi
 
-
 \if\LSROBO1
 \divider
 
@@ -172,7 +204,6 @@
 \item Implemented advanced controller in C++ to enable real-time control
 \end{itemize}
 \fi
-
 
 \if\FTCROBO1
 
@@ -200,27 +231,6 @@
 \fi
 
 %------------------------------------------------------------------------------
-\cvsection{Employment History}
-
-\if\Rohde1
-\cvevent{Systems Architect} {Rohde \& Schwarz}{Mar. 2021 -- Aug. 2022 -- Dallas, TX.}{}
-\begin{itemize}
-\item Developed projects post-sales from design to delivery to training
-\item Conducted design reviews for customer approval
-\item Supported teammates for flexible resource deployment
-\end{itemize}
-\divider
-\fi
-
-\if\LMCO1
-\cvevent{RF Design Intern}{Lockheed Martin RF Center of Excellence}{Jun. 2020 -- Aug. 2020 -- Littleton, CO.} {}
-\begin{itemize}
-\item Applied RF principles to design devices
-\item Verify designs in simulation \& present results to team
-\end{itemize}
-\fi
-
-%------------------------------------------------------------------------------
 \switchcolumn
 
 %------------------------------------------------------------------------------
@@ -233,10 +243,10 @@
 \cvevent{B.S. Electrical Engineering} {Colorado School of Mines}{Aug. 2018 -- Dec. 2020 -- GPA 3.7}{}
 \divider
 
-\cvevent{Associates of Science} {Lone Star College}{Aug. 2015 -- May. 2018 -- GPA 4.0}{}
-\divider
+\cvevent{Associates of Science \& Arts} {Lone Star College}{Aug. 2015 -- May. 2018 -- GPA 4.0}{}
+%\divider
 
-\cvevent{Associates of Arts} {Lone Star College}{Aug. 2015 -- May. 2018 -- GPA 4.0}{}
+%\cvevent{Associates of Arts} {Lone Star College}{Aug. 2015 -- May. 2018 -- GPA 4.0}{}
 
 %------------------------------------------------------------------------------
 \iffalse
@@ -281,6 +291,8 @@
 \cvtag{Ansys}
 \cvtag{HFSS}
 \cvtag{Maxwell 3D}
+\cvtag{Parametric CAD}
+\cvtag{Autodesk Inventor}
 
 \cvsection{Achievements}
 \cvachievement{\faGraduationCap}{Deans List Student}{Colorado School of Mines}
