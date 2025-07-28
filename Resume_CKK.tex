@@ -7,12 +7,16 @@
 %Variables to turn on and off sections and tailor
 \def\Rohde{1}
 \def\LMCO{1}
+\def\SDS{1}
 
+\def\SDSDSP{1}		%Section talking DSP work done for SDS
+\def\SDSUSB{1}		%Section talking about USB work done at SDS
+\def\SDSHIRING{1}		%Section talking about USB work done at SDS
 \def\RUROBLOXDATA{0}	%Roblox data scraper RCEL 506 project
 \def\RUWPTRX{1}		%WPTRx Research project
 \def\RUSDR{1}		%SDR Project in Modern Communications systems
 \def\RUXILINX{0}	%Xilinx accelerator using Vivado
-\def\RSEAMP{1}		%R&S Amplifier controller
+\def\RSEAMP{0}		%R&S Amplifier controller
 \def\RSDATA{0}		%Data scraping project at Rohde
 \def\CSMBLDC{0}		%CMS Senior Design Project
 \def\CSMQUAD{0}		%Quad Copter Project
@@ -84,6 +88,17 @@
 %------------------------------------------------------------------------------
 \cvsection{Employment History}
 
+\if\SDS1
+\cvevent{Firmware Engineer} {Scientific Data Systems}{Jan. 2024 -- curr. -- Houston, TX.}{}
+\begin{itemize}
+\item Converted legacy code to new processor architectures
+\item Met with customers to discuss future direction
+\item Worked independently to realize production software and hardware
+\end{itemize}
+\divider
+\fi
+
+
 \if\Rohde1
 \cvevent{EMC Systems Architect} {Rohde \& Schwarz}{Mar. 2021 -- Aug. 2022 -- Dallas, TX.}{}
 \begin{itemize}
@@ -104,6 +119,33 @@
 
 %------------------------------------------------------------------------------
 \cvsection{Prior Projects}
+
+\if\SDSHIRING1
+\cvevent{Hiring Manager}{Scientific Data Systems}{ Dec. 2024 - Mar. 2025}{}
+\begin{itemize}
+\item{Organized company attendance at University hiring events}
+\item{Recommended all candidates that were hired}
+\item{Reduced over 300 engineering resumes to 20 interested candidates}
+\end{itemize}
+\fi
+
+\if\SDSUSB1
+\cvevent{IO Expander PCB Development}{Scientific Data Systems}{ Feb 2025 }{}
+\begin{itemize}
+\item{Designed and tested replacement board to drop-in replace legacy version}
+\item{Developed USB system for data acquisition using WINUSB drivers}
+\item{Debugged electrical and firmware issues}
+\end{itemize}
+\fi
+
+\if\SDSDSP1
+\cvevent{DSP Processor Code Conversion}{Scientific Data Systems}{ May. 2024 }{}
+\begin{itemize}
+\item{Converted legacy code to new processor with over 100 individual files}
+\item{Developed DSP algorithms for real-time telemetry system}
+\item{Developed drop-in replacement system for legacy boards}
+\end{itemize}
+\fi
 
 \if\RUROBLOXDATA1
 \cvevent{Roblox Game Analyzer}{Rice University, Research Project}{Aug. 2023 - Dec. 2023}{}
@@ -262,12 +304,14 @@
 \cvsection{Skills}
 
 \cvsubsection{Electrical Skills}
+\cvtag{ARM}
+\cvtag{TIDSP}
+\cvtag{Segger IDE}
 \cvtag{AVR}
 \cvtag{PIC}
-\cvtag{ARM}
+\cvtag{PCB Assembly}
 \cvtag{Spice}
 \cvtag{RF Design}
-\cvtag{PCB Assembly}
 \cvtag{Hand Soldering}
 \cvtag{Debugging}
 
@@ -275,23 +319,24 @@
 \cvsubsection{Computer Skills}
 \cvtag{C}
 \cvtag{C++}
+\cvtag{GIT}
+\cvtag{NVIM}
 \cvtag{Python}
 \cvtag{Lua}
 \cvtag{Linux}
 \cvtag{GNUMake}
 \cvtag{\LaTeX}
-\cvtag{GIT}
 \cvtag{MS Office}
 
 ~\\
 \cvsubsection{Design Skills}
 \cvtag{KiCAD}
+\cvtag{Parametric CAD}
 \cvtag{MS Visio}
 \cvtag{AutoCAD}
 \cvtag{Ansys}
 \cvtag{HFSS}
 \cvtag{Maxwell 3D}
-\cvtag{Parametric CAD}
 \cvtag{Autodesk Inventor}
 
 \cvsection{Achievements}
